@@ -25,6 +25,18 @@ public class FireMockViewController: UIViewController {
 
     private var dataSource: FireMockDataSource!
 
+    public init() {
+        super.init(nibName: "FireMockViewController", bundle: Bundle.module)
+    }
+
+    private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
+    public required init?(coder: NSCoder) {
+        fatalError("Do not use this initializer.")
+    }
+
     override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,10 +95,10 @@ public class FireMockViewController: UIViewController {
     }
 
     private func registerXib() {
-        let nib = UINib(nibName: "FireMockTableViewCell", bundle: Bundle(for: FireMockTableViewCell.self))
+        let nib = UINib(nibName: "FireMockTableViewCell", bundle: Bundle.module)
         tableView.register(nib, forCellReuseIdentifier: "FireMockTableViewCell")
 
-        let nibHeader = UINib(nibName: "FireMockTableViewHeaderCell", bundle: Bundle(for: FireMockTableViewHeaderCell.self))
+        let nibHeader = UINib(nibName: "FireMockTableViewHeaderCell", bundle: Bundle.module)
         tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: "FireMockTableViewHeaderCell")
     }
 }
@@ -117,7 +129,7 @@ extension FireMockViewController: UITableViewDelegate {
         let configMock = sectionsData.configMockSections[indexPath.section].mocks[indexPath.row]
 
         if configMock.mocks.count > 1 {
-            let mockSelectionController = FireMockSelectionTableViewController(nibName: "FireMockSelectionTableViewController", bundle: Bundle(for: FireMockSelectionTableViewController.self))
+            let mockSelectionController = FireMockSelectionTableViewController(nibName: "FireMockSelectionTableViewController", bundle: Bundle.module)
             mockSelectionController.configMock = configMock
 
             self.navigationController?.pushViewController(mockSelectionController, animated: true)

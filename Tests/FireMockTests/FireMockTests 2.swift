@@ -23,7 +23,7 @@ class FireMockTests: XCTestCase {
         case noMatching
 
         var bundle: Bundle {
-            return Bundle(for: FireMockProtocolTests.self)
+            return Bundle.module
         }
         
         func mockFile() -> String {
@@ -147,7 +147,7 @@ class FireMockTests: XCTestCase {
     }
 
     func testMockViewController() {
-        let controller = FireMockViewController(nibName: "FireMockViewController", bundle: Bundle(for: FireMockViewController.self))
+        let controller = FireMockViewController()
         controller.view.backgroundColor = .white
         XCTAssertNotNil(controller)
 

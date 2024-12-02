@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct FireMock {
 
@@ -216,7 +217,7 @@ public struct FireMock {
     /// Present a default ViewController where are all mocks register by application in compile time.
     /// You can enabled or disabled any register mock on runtime.
     public static func presentMockRegisters(from: UIViewController, backTapped: ( () -> Void )?) {
-        let mockController = FireMockViewController(nibName: "FireMockViewController", bundle: Bundle(for: FireMockViewController.self))
+        let mockController = FireMockViewController()
         mockController.backTapped = backTapped
         let navController = UINavigationController(rootViewController: mockController)
         from.present(navController, animated: true, completion: nil)

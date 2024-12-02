@@ -21,7 +21,7 @@ class FireMockProtocolTests: XCTestCase {
         case successFill
 
         var bundle: Bundle {
-            return Bundle(for: FireMockProtocolTests.self)
+            return Bundle.module
         }
 
         func mockFile() -> String {
@@ -130,7 +130,7 @@ class FireMockProtocolTests: XCTestCase {
 
     func testFireMockProtocol() {
         let mock = NewsMock.successFill
-        XCTAssertEqual(mock.bundle, Bundle(for: FireMockProtocolTests.self))
+        XCTAssertEqual(mock.bundle, Bundle.module)
 
         XCTAssertNotNil(mock.headers)
         XCTAssertEqual(mock.headers!, [

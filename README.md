@@ -14,12 +14,12 @@ To mock your requests you need to add files contains your structure response dat
 
 ### Installing
 
-#### CocoaPods
+#### Swift Package Manager
 
-To integrate FireMock into your Xcode project using CocoaPods, specify it in your Podfile:
+To integrate FireMock into your Xcode project using Swift Package Manager :
 
 ```swift
-pod 'FireMock'
+.package(url: "https://github.com/Backelite/FireMockSPM.git", from: "3.2.0")
 ```
 
 ## Usage

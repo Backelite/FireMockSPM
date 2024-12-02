@@ -21,15 +21,15 @@ public final class FireMockTableViewHeaderCell: UITableViewHeaderFooterView {
         static let categoryContentCollapsedBackgroundColor: UIColor = UIColor.white
         static let categoryArrow: UIImage? = UIImage(
             named: "fireMock_arrowRight",
-            in: Bundle(for: FireMockTableViewHeaderCell.self),
+            in: Bundle.module,
             compatibleWith: nil)
         static let categoryArrowCollapsed: UIImage? = UIImage(
             named: "fireMock_plus",
-            in: Bundle(for: FireMockTableViewHeaderCell.self),
+            in: Bundle.module,
             compatibleWith: nil)
         static let categoryArrowExpanded: UIImage? = UIImage(
             named: "fireMock_minus",
-            in: Bundle(for: FireMockTableViewHeaderCell.self),
+            in: Bundle.module,
             compatibleWith: nil)
     }
 

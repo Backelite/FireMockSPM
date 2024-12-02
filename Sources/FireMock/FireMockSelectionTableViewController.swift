@@ -25,7 +25,7 @@ class FireMockSelectionTableViewController: UITableViewController {
     }
 
     private func registerXib() {
-        let nib = UINib(nibName: "FireMockSelectionTableViewCell", bundle: Bundle(for: FireMockSelectionTableViewCell.self))
+        let nib = UINib(nibName: "FireMockSelectionTableViewCell", bundle: Bundle.module)
         tableView.register(nib, forCellReuseIdentifier: "FireMockSelectionTableViewCell")
     }
 

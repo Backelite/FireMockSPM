@@ -19,3 +19,7 @@ Fix issue appear when URL request parameters and mock parameters are equal but n
 ## 3.1
 
 Migration to swift 4.2
+
+## 3.2
+
+Cocoapods no longer supported, migrate to SwiftPM

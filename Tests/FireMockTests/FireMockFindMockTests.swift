@@ -24,7 +24,7 @@ class FireMockFindMockTests: XCTestCase {
         case noMatching
 
         var bundle: Bundle {
-            return Bundle(for: FireMockProtocolTests.self)
+            return Bundle.module
         }
 
         func mockFile() -> String {
